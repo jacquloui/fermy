@@ -1,0 +1,175 @@
+/* ==========================================================================
+   1. RESET & VARIABLES CHARTES GRAPHIQUES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #0A4D34;     /* Vert Émeraude Profond (Tech + Nature) */
+    --accent-color: #FF8A5B;      /* Orange Abricot (Bouton d'action / CTA) */
+    --bg-light: #F8F9FA;          /* Off-White pour les sections alternées */
+    --text-dark: #212529;         /* Gris sombre pour une lecture premium */
+    --white: #FFFFFF;
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    color: var(--text-dark);
+    background-color: var(--white);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. BARRE DE NAVIGATION FIXE
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   3. STRUCTURE DES BOUTONS DE LA STARTUP
+   ========================================================================== */
+.btn-nav {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition-smooth);
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(10, 77, 52, 0.2);
+}
+
+.btn-primary {
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 138, 91, 0.4);
+}
+
+.btn-secondary {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   4. HERO SECTION (ACCUEIL)
+   ========================================================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 8% 60px 8%;
+    background: radial-gradient(circle at 80% 20%, rgba(10, 77, 52, 0.03) 0%, rgba(255, 255, 255, 0) 50%), var(--white);
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero-content h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: var(--primary-color);
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555c61;
+    margin-bottom: 40px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive basique pour mobile */
+@media (max-width: 768px) {
+    .navbar { padding: 16px 5%; }
+    .nav-links, .btn-nav { display: none; } /* On masquera le menu sur mobile pour l'instant */
+    .hero-section { padding: 140px 5% 40px 5%; }
+    .hero-content h1 { font-size: 2.6rem; letter-spacing: -1px; }
+    .hero-actions { flex-direction: column; gap: 15px; }
+}
