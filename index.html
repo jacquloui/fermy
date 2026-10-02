@@ -3,16 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fermy</title>
+    <title>Fermy | La cantine des fermes locales dans votre entreprise</title>
+    
+    <!-- Polices de startups : Syne (Titres géométriques) et Plus Jakarta Sans (Texte fluide) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Connexion à notre futur fichier de style -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>Bienvenue chez Fermy</h1>
+    <!-- Barre de navigation fixe -->
+    <header class="navbar">
+        <div class="logo">Fermy<span>.</span></div>
+        <nav class="nav-links">
+            <a href="#concept">Concept</a>
+            <a href="#fonctionnement">Fonctionnement</a>
+            <a href="#entreprises">Pour les entreprises</a>
+            <a href="#repas">Nos repas</a>
+        </nav>
+        <a href="#contact" class="btn-nav">Demander une dégustation</a>
+    </header>
 
-    <p>
-        Des repas frais, locaux et accessibles directement sur votre lieu de travail.
-    </p>
+    <main>
+        <!-- Section d'accueil (Hero) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>La cantine des fermes locales au cœur de votre entreprise.</h1>
+                <p>Des distributeurs connectés et réfrigérés approvisionnés chaque jour en repas frais et de saison. Conçu pour le bien-être de vos équipes, de jour comme de nuit.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary">Installer un distributeur</a>
+                    <a href="#concept" class="btn-secondary">Découvrir le concept</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
