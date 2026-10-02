@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. RESET & VARIABLES CHARTES GRAPHIQUES
+   1. RESET & VARIABLES CHARTES GRAPHIQUES (CORRECTIONS EXACETES)
    ========================================================================== */
 * {
     margin: 0;
@@ -10,10 +10,10 @@
 }
 
 :root {
-    --primary-color: #1E4631;     /* Le Vert de votre DA */
-    --accent-color: #FF6B35;      /* Orange plus vif et vitaminé */
-    --bg-cream: #F1F5E9;          /* Fond crème très doux */
-    --text-dark: #1E4631;         
+    --primary-color: #2B4C3F;     /* Le Vert exact de votre affiche Fermy (Doux & Terroir) */
+    --accent-color: #FF823A;      /* Le Orange couleur "fruit/orange" plus clair et lumineux */
+    --bg-cream: #F1F5E9;          /* Fond crème de votre univers de marque */
+    --text-dark: #2B4C3F;         
     --white: #FFFFFF;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -26,7 +26,7 @@ body {
 }
 
 /* ==========================================================================
-   2. BARRE DE NAVIGATION ET LOGO FERMEAL
+   2. BARRE DE NAVIGATION ET LOGO BI-POLICE VERTE
    ========================================================================== */
 .navbar {
     position: fixed;
@@ -40,29 +40,37 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(30, 70, 49, 0.06);
+    border-bottom: 1px solid rgba(43, 76, 63, 0.06);
 }
 
 .logo {
     font-size: 2.2rem;
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: baseline;
 }
 
+/* Première police pour "fer" : Terroir chic */
 .logo-fer {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-style: italic; /* Style terroir chic */
-    color: var(--primary-color);
+    font-style: italic; 
+    color: var(--primary-color); /* Vert de l'affiche */
 }
 
+/* Deuxième police totalement différente pour "meal" : Moderne/Startup */
 .logo-meal {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500; /* Style moderne et fin */
-    color: var(--primary-color);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; 
+    text-transform: lowercase;
+    color: var(--primary-color); /* Vert de l'affiche */
+    margin-left: 2px;
 }
 
+/* Juste le point final en Orange Fruit */
 .logo-dot {
-    color: var(--accent-color);
+    font-family: 'Syne', sans-serif;
+    color: var(--accent-color); 
     font-weight: 800;
 }
 
@@ -99,7 +107,7 @@ body {
 
 .btn-nav:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(30, 70, 49, 0.15);
+    box-shadow: 0 4px 15px rgba(43, 76, 63, 0.15);
 }
 
 .btn-primary {
@@ -116,7 +124,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+    box-shadow: 0 8px 25px rgba(255, 130, 58, 0.35);
 }
 
 .btn-secondary {
