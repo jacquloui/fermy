@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fermeal | Sain et à portée de main</title>
     
-    <!-- Polices : Playfair Display (pour le "fer" du logo), Syne (Titres), Plus Jakarta Sans (Texte) -->
+    <!-- Polices de la DA : Playfair Display (pour le "fer"), Syne (pour "meal" et les Titres), Plus Jakarta Sans (Texte) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
-    <!-- Connexion au fichier de style -->
+    <!-- Connexion au fichier de style style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Barre de navigation fixe -->
+    <!-- 1. Barre de navigation fixe -->
     <header class="navbar">
-        <!-- Nouveau logo fermeal. -->
-        <div class="logo"><span class="logo-fer">fer</span><span class="logo-meal">meal</span><span class="logo-dot">.</span></div>
+        <!-- Logo divisé pour appliquer les deux polices distinctes en vert et le point orange -->
+        <div class="logo">
+            <span class="logo-fer">fer</span><span class="logo-meal">meal</span><span class="logo-dot">.</span>
+        </div>
         
         <nav class="nav-links">
             <a href="#concept">Concept</a>
@@ -30,9 +32,10 @@
     </header>
 
     <main>
-        <!-- Section d'accueil (Hero) avec votre nouveau slogan -->
+        <!-- 2. Section d'accueil (Hero) -->
         <section id="hero" class="hero-section">
             <div class="hero-content">
+                <!-- Votre nouveau slogan avec le point final en orange couleur "fruit" -->
                 <h1>Sain et à portée de main<span>.</span></h1>
                 <p>Des distributeurs connectés et réfrigérés approvisionnés chaque jour en repas frais, sains et de saison. Conçu pour le bien-être de vos équipes, de jour comme de nuit.</p>
                 <div class="hero-actions">
