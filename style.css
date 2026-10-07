@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. RESET & VARIABLES CHARTES GRAPHIQUES
+   1. RESET & VARIABLES GRAPHISQUES UNIFIÉES
    ========================================================================== */
 * {
     margin: 0;
@@ -10,9 +10,11 @@
 }
 
 :root {
-    --primary-color: #2B4C3F;     /* Le Vert de votre affiche Fermy */
+    --primary-color: #2B4C3F;     /* Le Vert de base de votre affiche */
+    --primary-vegetal: #3B7A57;   /* Le Vert végétal frais pour la page Concept */
     --accent-color: #FF823A;      /* Le Orange fruit lumineux */
-    --bg-cream: #F1F5E9;          /* Fond crème de votre univers */
+    --bg-cream: #F1F5E9;          /* Fond crème chaleureux */
+    --bg-cream-light: #F9FAF6;    /* Fond crème ultra-léger */
     --text-dark: #2B4C3F;         
     --white: #FFFFFF;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -26,7 +28,7 @@ body {
 }
 
 /* ==========================================================================
-   2. BARRE DE NAVIGATION ET LOGO BI-POLICE
+   2. BARRE DE NAVIGATION COMMUNE (FIXE & DESIGN PRIVILÉGIÉ)
    ========================================================================== */
 .navbar {
     position: fixed;
@@ -89,7 +91,7 @@ body {
 }
 
 /* ==========================================================================
-   3. DESIGN DES BOUTONS STARTUP
+   3. CONFIGURATION DES BOUTONS ANIMÉS
    ========================================================================== */
 .btn-nav {
     text-decoration: none;
@@ -144,10 +146,10 @@ body {
 }
 
 /* ==========================================================================
-   4. HERO SECTION (ACCUEIL)
+   4. STRUCTURE DE LA PAGE D'ACCUEIL (INDEX.HTML)
    ========================================================================== */
 .hero-section {
-    min-height: 85vh; /* Légèrement réduit pour laisser voir la bande partenaires sans scroller */
+    min-height: 85vh;
     display: flex;
     align-items: center;
     padding: 140px 8% 60px 8%;
@@ -168,9 +170,7 @@ body {
     margin-bottom: 24px;
 }
 
-.hero-content h1 span {
-    color: var(--accent-color);
-}
+.hero-content h1 span { color: var(--accent-color); }
 
 .hero-content p {
     font-size: 1.15rem;
@@ -180,73 +180,246 @@ body {
     margin-bottom: 40px;
 }
 
-.hero-actions {
-    display: flex;
-    gap: 20px;
-}
+.hero-actions { display: flex; gap: 20px; }
 
-/* ==========================================================================
-   5. BANDE "NOS PARTENAIRES" (STYLE LOGOS EN LIGNE CENTRÉS)
-   ========================================================================== */
+/* Bande partenaires sur l'accueil */
 .partners-section {
-    background-color: var(--bg-cream) !important; /* Force l'application de la couleur crème */
+    background-color: var(--bg-cream) !important;
     width: 100%;
     padding: 60px 8%;
     text-align: center;
     border-top: 1px solid rgba(43, 76, 63, 0.08);
     border-bottom: 1px solid rgba(43, 76, 63, 0.08);
-    display: block !important;
 }
 
 .partners-section h2 {
-    font-family: 'Syne', sans-serif !important;
+    font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 1.8rem;
     color: var(--primary-color);
-    letter-spacing: -0.5px;
     margin-bottom: 40px;
 }
 
-.partners-section h2 span {
-    color: var(--accent-color);
-}
+.partners-section h2 span { color: var(--accent-color); }
 
-/* Alignement strict horizontal et centré pour imiter l'exemple */
 .partners-grid {
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
     flex-wrap: wrap !important;
-    gap: 60px !important; /* Grand espace horizontal entre les noms */
+    gap: 60px !important;
     max-width: 1200px;
     margin: 0 auto;
-    list-style: none;
 }
 
 .partner-placeholder {
-    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--primary-color);
     opacity: 0.4;
-    letter-spacing: 0.5px;
-    transition: var(--transition-smooth);
-    display: inline-block !important;
-}
-
-.partner-placeholder:hover {
-    opacity: 0.9;
 }
 
 /* ==========================================================================
-   6. RESPONSIVE DESIGN
+   5. DESIGN EXCLUSIF DE LA PAGE CONCEPT (CONCEPT.HTML)
    ========================================================================== */
-@media (max-width: 768px) {
-    .navbar { padding: 16px 5%; }
-    .nav-links, .btn-nav { display: none; }
-    .hero-section { padding: 140px 5% 40px 5%; }
-    .hero-content h1 { font-size: 2.8rem; letter-spacing: -1px; }
-    .hero-actions { flex-direction: column; gap: 15px; }
-    .partners-grid { gap: 30px !important; }
+.concept-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
+
+.text-center { text-align: center; }
+.narrow { max-width: 750px; margin: 0 auto; }
+
+/* Hero Page Concept */
+.concept-hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 160px 5% 80px 5%;
+    background: linear-gradient(180deg, var(--bg-cream) 0%, var(--white) 100%);
+}
+
+.concept-hero-inner { max-width: 800px; }
+
+.concept-hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: var(--primary-vegetal);
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+.concept-hero h1 span { color: var(--accent-color); }
+
+.concept-hero p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--primary-color);
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Sections Story (Layouts alternés Texte / Image côte à côte) */
+.story-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.story-section.reverse .split-layout {
+    flex-direction: row-reverse !important;
+}
+
+.split-layout {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 80px !important;
+}
+
+.story-text { flex: 1; text-align: left; }
+
+.story-text h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: var(--primary-vegetal);
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.story-text h2 span { color: var(--accent-color); }
+
+.story-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.concept-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-bottom: 16px;
+}
+
+.highlight-text {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    color: var(--primary-vegetal) !important;
+    line-height: 1.6;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+/* Emplacements photos professionnels */
+.placeholder-bg {
+    flex: 1;
+    height: 440px;
+    background-color: var(--bg-cream-light);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    color: var(--primary-vegetal);
+    opacity: 0.6;
+    border: 2px dashed rgba(59, 122, 87, 0.2);
+}
+
+/* Section Saisons (Cartes en grille) */
+.seasons-section {
+    padding: 100px 0;
+    background-color: var(--bg-cream-light);
+}
+
+.seasons-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: var(--primary-vegetal);
+    margin-bottom: 24px;
+}
+
+.seasons-section h2 span { color: var(--accent-color); }
+
+.section-lead {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--primary-vegetal);
+    margin-bottom: 50px;
+}
+
+.seasons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 24px !important;
+    margin-top: 40px;
+}
+
+.season-card {
+    background-color: var(--white);
+    padding: 50px 30px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.season-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59, 122, 87, 0.2);
+}
+
+.season-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.4rem;
+    color: var(--primary-vegetal);
+}
+
+/* Tags de valeurs */
+.tags-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.tag-item {
+    background-color: var(--bg-cream-light);
+    color: var(--primary-vegetal);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(59, 122, 87, 0.1);
+}
+
+/* Section Timeline (Processus horizontal) */
+.timeline-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
