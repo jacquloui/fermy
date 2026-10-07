@@ -190,3 +190,59 @@ body {
     .hero-content h1 { font-size: 2.8rem; letter-spacing: -1px; }
     .hero-actions { flex-direction: column; gap: 15px; }
 }
+
+/* ==========================================================================
+   5. SECTION NOS PARTENAIRES (BANDE CRÈME STYLE STARTUP)
+   ========================================================================== */
+.partners-section {
+    background-color: var(--bg-cream); /* La couleur crème de votre DA */
+    padding: 60px 8%;
+    text-align: center;
+    border-top: 1px solid rgba(43, 76, 63, 0.04);
+    border-bottom: 1px solid rgba(43, 76, 63, 0.04);
+}
+
+.partners-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+    margin-bottom: 35px;
+}
+
+.partners-section h2 span {
+    color: var(--accent-color); /* Le point orange à la fin */
+}
+
+/* Grille flexible pour aligner les logos de manière moderne */
+.partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Style des emplacements temporaires en attendant vos vrais logos */
+.partner-placeholder {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    opacity: 0.4; /* Très discret en attendant les logos */
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+}
+
+.partner-placeholder:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .partners-section { padding: 40px 5%; }
+    .partners-grid { gap: 30px; }
+}
+
