@@ -6,8 +6,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    scroll-behavior: smooth;
 }
+
+html { scroll-behavior: smooth; }
 
 :root {
     --primary-color: #2B4C3F;
@@ -15,7 +16,7 @@
     --accent-color: #FF823A;
     --bg-cream: #F1F5E9;
     --bg-cream-light: #F9FAF6;
-    --text-dark: #2B4C3F;         
+    --text-dark: #2B4C3F;
     --white: #FFFFFF;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -26,6 +27,8 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
+
+section[id] { scroll-margin-top: 90px; }
 
 .navbar {
     position: fixed;
@@ -52,13 +55,13 @@ body {
 .logo-fer {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-style: italic; 
+    font-style: italic;
     color: var(--primary-color);
 }
 
 .logo-meal {
     font-family: 'Syne', sans-serif;
-    font-weight: 700; 
+    font-weight: 700;
     text-transform: lowercase;
     color: var(--primary-color);
     margin-left: 2px;
@@ -66,7 +69,7 @@ body {
 
 .logo-dot {
     font-family: 'Syne', sans-serif;
-    color: var(--accent-color); 
+    color: var(--accent-color);
     font-weight: 800;
 }
 
@@ -207,6 +210,7 @@ body {
     color: var(--primary-color);
     opacity: 0.4;
 }
+
 /* ==========================================================================
    PARTIE 2 : PAGES CONCEPT & ENTREPRISES
    ========================================================================== */
@@ -642,6 +646,150 @@ body {
     height: 140px;
 }
 
+/* ==========================================================================
+   PARTIE 3 : NOS REPAS, CONTACT, FOOTER
+   ========================================================================== */
+.meals-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.meals-section h2,
+.contact-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: var(--primary-vegetal);
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+.meals-section h2 span,
+.contact-section h2 span { color: var(--accent-color); }
+
+.meals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.meal-card {
+    background-color: var(--bg-cream-light);
+    padding: 20px 20px 30px;
+    border-radius: 24px;
+    text-align: left;
+    border: 1px solid rgba(59, 122, 87, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.meal-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--white);
+    box-shadow: 0 10px 30px rgba(43, 76, 63, 0.04);
+}
+
+.meal-card .meal-photo {
+    flex: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+}
+
+.meal-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    color: var(--primary-vegetal);
+    margin-bottom: 8px;
+}
+
+.meal-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--bg-cream);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid rgba(43, 76, 63, 0.15);
+    border-radius: 16px;
+    background-color: var(--white);
+    font-size: 1rem;
+    color: var(--primary-color);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-vegetal);
+    box-shadow: 0 0 0 3px rgba(59, 122, 87, 0.12);
+}
+
+.contact-form .btn-primary {
+    border: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 50px 8% 30px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.site-footer .logo-fer,
+.site-footer .logo-meal { color: var(--white); }
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+.footer-links a:hover { opacity: 1; }
+
+.footer-copy {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+/* ==========================================================================
+   PARTIE 4 : RESPONSIVE (tablette et mobile)
+   ========================================================================== */
 @media (max-width: 992px) {
     .split-layout { flex-direction: column !important; gap: 40px !important; }
     .timeline-grid { flex-direction: column !important; gap: 20px !important; }
@@ -660,4 +808,6 @@ body {
     .hero-content h1 { font-size: 2.8rem; letter-spacing: -1px; }
     .hero-actions { flex-direction: column; gap: 15px; }
     .partners-grid { gap: 30px !important; }
+    .meals-section h2,
+    .contact-section h2 { font-size: 2.2rem; }
 }
