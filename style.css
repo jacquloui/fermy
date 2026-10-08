@@ -56,14 +56,14 @@ section[id] { scroll-margin-top: 90px; }
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--primary-vegetal); /* Devient vert végétal */
 }
 
 .logo-meal {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
     text-transform: lowercase;
-    color: var(--primary-color);
+    color: var(--primary-vegetal); /* Devient vert végétal */
     margin-left: 2px;
 }
 
