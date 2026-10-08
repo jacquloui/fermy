@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fermeal | Sain et à portée de main</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Feuille de style -->
+    
+    <!-- Liens Google Fonts réparés à 100% pour charger les polices du logo et des titres -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Connexion au fichier de style style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- 1. Barre de navigation fixe -->
     <header class="navbar">
+        <!-- Structure du logo en 3 morceaux pour appliquer le design en pur CSS -->
         <div class="logo">
-            <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: baseline;">
+            <a href="index.html">
                 <span class="logo-fer">fer</span><span class="logo-meal">meal</span><span class="logo-dot">.</span>
             </a>
         </div>
-
+        
         <nav class="nav-links">
             <a href="concept.html">Concept</a>
             <a href="fonctionnement.html">Comment ça marche ?</a>
-            <a href="entreprise.html">Pour les entreprises</a>
+            <a href="entreprises.html">Pour les entreprises</a>
             <a href="#repas">Nos repas</a>
         </nav>
         <a href="#contact" class="btn-nav">Demander une dégustation</a>
@@ -45,10 +46,10 @@
             </div>
         </section>
 
-        <!-- 3. Nos partenaires -->
+        <!-- 3. Section : Nos Partenaires -->
         <section class="partners-section">
             <h2>Nos partenaires<span>.</span></h2>
-
+            
             <div class="partners-grid">
                 <div class="partner-placeholder">Fermes Locales</div>
                 <div class="partner-placeholder">Coopératives</div>
@@ -56,67 +57,7 @@
                 <div class="partner-placeholder">Labels Éco</div>
             </div>
         </section>
-
-        <!-- 4. Nos repas -->
-        <section id="repas" class="meals-section">
-            <div class="concept-container text-center">
-                <h2>Nos repas<span>.</span></h2>
-                <p class="section-lead">Des recettes simples, préparées à la main avec des produits locaux, qui évoluent au fil des saisons.</p>
-
-                <div class="meals-grid">
-                    <div class="meal-card">
-                        <div class="placeholder-bg meal-photo"><span>[ Photo : Plat 1 ]</span></div>
-                        <h4>Plats chauds</h4>
-                        <p>Des plats mijotés, réconfortants et équilibrés.</p>
-                    </div>
-                    <div class="meal-card">
-                        <div class="placeholder-bg meal-photo"><span>[ Photo : Plat 2 ]</span></div>
-                        <h4>Salades &amp; bowls</h4>
-                        <p>Frais, croquants et riches en légumes de saison.</p>
-                    </div>
-                    <div class="meal-card">
-                        <div class="placeholder-bg meal-photo"><span>[ Photo : Plat 3 ]</span></div>
-                        <h4>Desserts &amp; collations</h4>
-                        <p>Une touche sucrée, sans excès, pour finir la pause.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Contact -->
-        <section id="contact" class="contact-section">
-            <div class="concept-container text-center narrow">
-                <h2>Parlons de votre projet<span>.</span></h2>
-                <p class="section-lead">Demandez une dégustation ou l'installation d'un distributeur. Nous vous répondons rapidement.</p>
-
-                <!-- À remplacer par l'adresse de ton service de formulaire (Formspree, Netlify Forms...) -->
-                <form class="contact-form" action="#" method="post">
-                    <input type="text" name="nom" placeholder="Votre nom" required>
-                    <input type="text" name="entreprise" placeholder="Votre entreprise">
-                    <input type="email" name="email" placeholder="Votre adresse e-mail" required>
-                    <textarea name="message" rows="4" placeholder="Votre message (effectifs, horaires, besoins...)"></textarea>
-                    <button type="submit" class="btn-primary">Envoyer ma demande</button>
-                </form>
-            </div>
-        </section>
     </main>
-
-    <!-- 6. Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="logo">
-                <span class="logo-fer">fer</span><span class="logo-meal">meal</span><span class="logo-dot">.</span>
-            </div>
-            <nav class="footer-links">
-                <a href="concept.html">Concept</a>
-                <a href="fonctionnement.html">Comment ça marche ?</a>
-                <a href="entreprise.html">Pour les entreprises</a>
-                <a href="#repas">Nos repas</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <p class="footer-copy">© 2026 Fermeal. Tous droits réservés.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
