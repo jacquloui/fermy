@@ -19,6 +19,8 @@ html { scroll-behavior: smooth; }
     --text-dark: #2B4C3F;
     --white: #FFFFFF;
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --syne-height: 1.15;
 }
 
 body {
@@ -833,4 +835,24 @@ section[id] { scroll-margin-top: 90px; }
     .partners-grid { gap: 30px !important; }
     .meals-section h2,
     .contact-section h2 { font-size: 2.2rem; }
+}
+
+.hero-content h1,
+.partners-section h2,
+.concept-hero h1,
+.story-text h2,
+.seasons-section h2,
+.season-card h4,
+.timeline-section h2,
+.timeline-item-card h4,
+.why-section h2,
+.frigo-section h2,
+.final-cta-section h2,
+.flow-step span,
+.meals-section h2,
+.contact-section h2,
+.meal-card h4,
+.logo .logo-meal,
+.logo .logo-dot {
+    transform: scaleY(var(--syne-height));
 }
