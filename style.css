@@ -358,8 +358,8 @@ section[id] { scroll-margin-top: 90px; }
 .seasons-section h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: 3rem;
-    line-height: 1.5;
+    font-size: 2.8rem;
+    transform: scaleY(1.15);
     color: var(--primary-vegetal);
     margin-bottom: 24px;
 }
