@@ -45,6 +45,8 @@ section[id] { scroll-margin-top: 90px; }
     border-bottom: 1px solid rgba(43, 76, 63, 0.06);
 }
 
+
+/* LOGO FERMEAL */
 .logo {
     font-size: 2.2rem;
     letter-spacing: -0.5px;
@@ -52,26 +54,46 @@ section[id] { scroll-margin-top: 90px; }
     align-items: baseline;
 }
 
-.logo-fer {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-style: italic;
-    color: var(--primary-vegetal); /* Devient vert végétal */
+/* Suppression du soulignement du lien */
+.logo a,
+.logo a:link,
+.logo a:visited,
+.logo a:hover,
+.logo a:active,
+.logo a:focus {
+    text-decoration: none !important;
+    border-bottom: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: baseline;
 }
 
-.logo-meal {
+/* "fer" : police italique */
+.logo .logo-fer {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--primary-vegetal);
+}
+
+/* "meal" : police droite */
+.logo .logo-meal {
     font-family: 'Syne', sans-serif;
+    font-style: normal;
     font-weight: 700;
     text-transform: lowercase;
-    color: var(--primary-vegetal); /* Devient vert végétal */
+    color: var(--primary-vegetal);
     margin-left: 2px;
 }
 
-.logo-dot {
+/* Point orange */
+.logo .logo-dot {
     font-family: 'Syne', sans-serif;
-    color: var(--accent-color);
+    font-style: normal;
     font-weight: 800;
+    color: var(--accent-color);
 }
+
 
 .nav-links {
     display: flex;
