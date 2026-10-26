@@ -1,6 +1,8 @@
+
 /* ==========================================================================
    PARTIE 1 : FONDATIONS & ACCUEIL
    ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +10,9 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color: #2B4C3F;
@@ -30,7 +34,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-section[id] { scroll-margin-top: 90px; }
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
 
 .navbar {
     position: fixed;
@@ -49,6 +60,7 @@ section[id] { scroll-margin-top: 90px; }
 
 
 /* LOGO FERMEAL */
+
 .logo {
     font-size: 2.2rem;
     letter-spacing: -0.5px;
@@ -56,7 +68,6 @@ section[id] { scroll-margin-top: 90px; }
     align-items: baseline;
 }
 
-/* Suppression du soulignement du lien */
 .logo a,
 .logo a:link,
 .logo a:visited,
@@ -71,6 +82,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 /* "fer" : police italique */
+
 .logo .logo-fer {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -79,6 +91,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 /* "meal" : police droite */
+
 .logo .logo-meal {
     font-family: 'Syne', sans-serif;
     font-style: normal;
@@ -89,6 +102,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 /* Point orange */
+
 .logo .logo-dot {
     font-family: 'Syne', sans-serif;
     font-style: normal;
@@ -96,6 +110,8 @@ section[id] { scroll-margin-top: 90px; }
     color: var(--accent-color);
 }
 
+
+/* Liens de navigation */
 
 .nav-links {
     display: flex;
@@ -114,6 +130,9 @@ section[id] { scroll-margin-top: 90px; }
     opacity: 0.7;
 }
 
+
+/* Bouton de navigation */
+
 .btn-nav {
     text-decoration: none;
     background-color: var(--primary-color);
@@ -129,6 +148,11 @@ section[id] { scroll-margin-top: 90px; }
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(43, 76, 63, 0.15);
 }
+
+
+/* ==========================================================================
+   BOUTONS
+   ========================================================================== */
 
 .btn-primary {
     text-decoration: none;
@@ -166,15 +190,26 @@ section[id] { scroll-margin-top: 90px; }
     transform: translateY(-3px);
 }
 
+
+/* ==========================================================================
+   PAGE D'ACCUEIL
+   ========================================================================== */
+
 .hero-section {
     min-height: 85vh;
     display: flex;
     align-items: center;
     padding: 140px 8% 60px 8%;
-    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--bg-cream) 0%,
+        var(--white) 100%
+    );
 }
 
-.hero-content { max-width: 680px; }
+.hero-content {
+    max-width: 680px;
+}
 
 .hero-content h1 {
     font-family: 'Syne', sans-serif;
@@ -186,7 +221,9 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 24px;
 }
 
-.hero-content h1 span { color: var(--accent-color); }
+.hero-content h1 span {
+    color: var(--accent-color);
+}
 
 .hero-content p {
     font-size: 1.15rem;
@@ -196,7 +233,15 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 40px;
 }
 
-.hero-actions { display: flex; gap: 20px; }
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* ==========================================================================
+   PARTENAIRES
+   ========================================================================== */
 
 .partners-section {
     background-color: var(--bg-cream) !important;
@@ -215,7 +260,9 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 40px;
 }
 
-.partners-section h2 span { color: var(--accent-color); }
+.partners-section h2 span {
+    color: var(--accent-color);
+}
 
 .partners-grid {
     display: flex !important;
@@ -235,9 +282,14 @@ section[id] { scroll-margin-top: 90px; }
     opacity: 0.4;
 }
 
+
 /* ==========================================================================
    PARTIE 2 : PAGES CONCEPT & ENTREPRISES
    ========================================================================== */
+
+
+/* Conteneurs généraux */
+
 .concept-container {
     width: 100%;
     max-width: 1200px;
@@ -245,8 +297,19 @@ section[id] { scroll-margin-top: 90px; }
     padding: 0 5%;
 }
 
-.text-center { text-align: center; }
-.narrow { max-width: 750px; margin: 0 auto; }
+.text-center {
+    text-align: center;
+}
+
+.narrow {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================================================
+   HERO DE LA PAGE CONCEPT
+   ========================================================================== */
 
 .concept-hero {
     min-height: 75vh;
@@ -255,10 +318,16 @@ section[id] { scroll-margin-top: 90px; }
     justify-content: center;
     text-align: center;
     padding: 160px 5% 80px 5%;
-    background: linear-gradient(180deg, var(--bg-cream) 0%, var(--white) 100%);
+    background: linear-gradient(
+        180deg,
+        var(--bg-cream) 0%,
+        var(--white) 100%
+    );
 }
 
-.concept-hero-inner { max-width: 800px; }
+.concept-hero-inner {
+    max-width: 800px;
+}
 
 .concept-hero h1 {
     font-family: 'Syne', sans-serif;
@@ -270,7 +339,9 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 24px;
 }
 
-.concept-hero h1 span { color: var(--accent-color); }
+.concept-hero h1 span {
+    color: var(--accent-color);
+}
 
 .concept-hero p {
     font-size: 1.3rem;
@@ -279,6 +350,11 @@ section[id] { scroll-margin-top: 90px; }
     opacity: 0.9;
     margin-bottom: 40px;
 }
+
+
+/* ==========================================================================
+   SECTIONS DE PRÉSENTATION
+   ========================================================================== */
 
 .story-section {
     padding: 100px 0;
@@ -296,7 +372,11 @@ section[id] { scroll-margin-top: 90px; }
     gap: 80px !important;
 }
 
-.story-text { flex: 1; text-align: left; }
+.story-text {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
 
 .story-text h2 {
     font-family: 'Syne', sans-serif;
@@ -308,7 +388,9 @@ section[id] { scroll-margin-top: 90px; }
     line-height: 1.2;
 }
 
-.story-text h2 span { color: var(--accent-color); }
+.story-text h2 span {
+    color: var(--accent-color);
+}
 
 .story-text p {
     font-size: 1.1rem;
@@ -337,7 +419,13 @@ section[id] { scroll-margin-top: 90px; }
     margin-top: 30px;
 }
 
-/* Images des sections de la page Concept */
+
+/* ==========================================================================
+   IMAGES DES SECTIONS
+   ========================================================================== */
+
+/* Conteneur des grandes images */
+
 .story-image {
     flex: 1;
     min-width: 0;
@@ -347,7 +435,10 @@ section[id] { scroll-margin-top: 90px; }
     background-color: var(--bg-cream-light);
 }
 
-.story-image img {
+/* Images des sections de présentation */
+
+.story-image img,
+.placeholder-bg img {
     display: block;
     width: 100%;
     height: 100%;
@@ -355,17 +446,18 @@ section[id] { scroll-margin-top: 90px; }
     object-position: center;
 }
 
-/* Style du cadre du distributeur */
+/* Cadre du distributeur */
+
 .story-image.white-border {
     border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
+/* Conteneurs d'images et emplacements temporaires */
 
-/* Conteneurs d'images et placeholders */
 .placeholder-bg {
     flex: 1;
-    height: 440px;
     min-width: 0;
+    height: 440px;
     background-color: var(--bg-cream-light);
     border-radius: 32px;
     display: flex;
@@ -378,21 +470,17 @@ section[id] { scroll-margin-top: 90px; }
     border: 1px solid rgba(59, 122, 87, 0.08);
 }
 
-/* Images dans les sections de présentation */
+/* Les images ne doivent pas dépasser de leur cadre */
+
 .story-image img,
 .placeholder-bg img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    flex-shrink: 0;
 }
 
-/* Cadre de la photo principale du Hero */
-.story-image.white-border {
-    border: 1px solid rgba(0, 0, 0, 0.03);
-}
 
+/* ==========================================================================
+   SECTION DES SAISONS ET AVANTAGES
+   ========================================================================== */
 
 .seasons-section {
     padding: 100px 0;
@@ -408,7 +496,9 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 24px;
 }
 
-.seasons-section h2 span { color: var(--accent-color); }
+.seasons-section h2 span {
+    color: var(--accent-color);
+}
 
 .section-lead {
     font-size: 1.15rem;
@@ -428,7 +518,10 @@ section[id] { scroll-margin-top: 90px; }
 
 .seasons-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    ) !important;
     gap: 24px !important;
     margin-top: 40px;
 }
@@ -437,9 +530,9 @@ section[id] { scroll-margin-top: 90px; }
     background-color: var(--white);
     padding: 50px 30px;
     border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
     transition: var(--transition-smooth);
-    border: 1px solid rgba(0,0,0,0.02);
+    border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .season-card:hover {
@@ -452,6 +545,16 @@ section[id] { scroll-margin-top: 90px; }
     font-size: 1.4rem;
     color: var(--primary-vegetal);
 }
+
+.b2b-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================================================
+   TAGS ET HORAIRES
+   ========================================================================== */
 
 .tags-group {
     display: flex;
@@ -470,6 +573,25 @@ section[id] { scroll-margin-top: 90px; }
     border: 1px solid rgba(59, 122, 87, 0.1);
 }
 
+.hours-schedule {
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hours-schedule span {
+    color: var(--primary-vegetal);
+    padding: 0 12px;
+}
+
+
+/* ==========================================================================
+   TIMELINE : FONCTIONNEMENT DE FERMEAL
+   ========================================================================== */
+
 .timeline-section {
     padding: 120px 0;
     background-color: var(--white);
@@ -484,7 +606,9 @@ section[id] { scroll-margin-top: 90px; }
     letter-spacing: -1px;
 }
 
-.timeline-section h2 span { color: var(--accent-color); }
+.timeline-section h2 span {
+    color: var(--accent-color);
+}
 
 .timeline-grid {
     display: flex !important;
@@ -498,6 +622,7 @@ section[id] { scroll-margin-top: 90px; }
 
 .timeline-item-card {
     flex: 1;
+    min-width: 0;
     background-color: var(--bg-cream-light);
     padding: 40px 30px;
     border-radius: 24px;
@@ -538,6 +663,11 @@ section[id] { scroll-margin-top: 90px; }
     opacity: 0.8;
 }
 
+
+/* ==========================================================================
+   SECTION ÉQUIPES ET HORAIRES
+   ========================================================================== */
+
 .why-section {
     padding: 120px 0;
     background-color: var(--bg-cream-light);
@@ -553,7 +683,9 @@ section[id] { scroll-margin-top: 90px; }
     letter-spacing: -1px;
 }
 
-.why-section h2 span { color: var(--accent-color); }
+.why-section h2 span {
+    color: var(--accent-color);
+}
 
 .why-section p {
     font-size: 1.15rem;
@@ -571,19 +703,10 @@ section[id] { scroll-margin-top: 90px; }
     line-height: 1.6;
 }
 
-.hours-schedule {
-    margin-top: 40px;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
-.hours-schedule span {
-    color: var(--primary-vegetal);
-    padding: 0 12px;
-}
+/* ==========================================================================
+   SECTION RÉFRIGÉRATEUR
+   ========================================================================== */
 
 .frigo-section {
     padding: 100px 0;
@@ -597,7 +720,9 @@ section[id] { scroll-margin-top: 90px; }
     margin-bottom: 24px;
 }
 
-.frigo-section h2 span { color: var(--accent-color); }
+.frigo-section h2 span {
+    color: var(--accent-color);
+}
 
 .benefits-grid {
     margin-top: 35px;
@@ -613,49 +738,36 @@ section[id] { scroll-margin-top: 90px; }
     opacity: 0.9;
 }
 
-.benefit-item strong { color: var(--primary-vegetal); }
+.benefit-item strong {
+    color: var(--primary-vegetal);
+}
 
 .white-border {
     background-color: var(--bg-cream-light);
-    border: 1px solid rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.final-cta-section {
-    padding: 140px 0;
-    background-color: var(--bg-cream);
-    text-align: center;
-}
 
-.final-cta-section h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--primary-vegetal);
-    letter-spacing: -2px;
-    margin-bottom: 16px;
-}
-
-.final-cta-section h2 span { color: var(--accent-color); }
-
-.final-cta-section p {
-    font-size: 1.3rem;
-    color: var(--primary-vegetal);
-    margin-bottom: 40px;
-    opacity: 0.8;
-}
+/* ==========================================================================
+   PAGE ENTREPRISES : HERO
+   ========================================================================== */
 
 .b2b-hero {
     min-height: 85vh;
     display: flex;
     align-items: center;
     padding: 160px 0 80px 0;
-    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--white) 100%);
+    background: linear-gradient(
+        135deg,
+        var(--bg-cream) 0%,
+        var(--white) 100%
+    );
 }
 
-.b2b-icon {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-}
+
+/* ==========================================================================
+   PAGE ENTREPRISES : PARCOURS DES EMPLOYÉS
+   ========================================================================== */
 
 .b2b-flow-steps {
     margin-top: 30px;
@@ -672,7 +784,9 @@ section[id] { scroll-margin-top: 90px; }
     text-align: left;
 }
 
-.flow-step p { margin-bottom: 0; }
+.flow-step p {
+    margin-bottom: 0;
+}
 
 .flow-step span {
     font-family: 'Syne', sans-serif;
@@ -686,12 +800,15 @@ section[id] { scroll-margin-top: 90px; }
     justify-content: center;
     border-radius: 50%;
     font-size: 0.95rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     flex-shrink: 0;
 }
 
 
-/* Mosaïque culinaire Fermeal */
+/* ==========================================================================
+   PAGE ENTREPRISES : MOSAÏQUE CULINAIRE
+   ========================================================================== */
+
 .b2b-food-mosaic {
     flex: 1;
     min-width: 0;
@@ -701,17 +818,23 @@ section[id] { scroll-margin-top: 90px; }
     width: 100%;
 }
 
+/* Grande photo du plat */
+
 .b2b-food-mosaic .mosaic-main {
     height: 280px;
     width: 100%;
     flex: none;
 }
 
+/* Grille des quatre petites photos */
+
 .b2b-food-mosaic .mosaic-sub-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
 }
+
+/* Dimensions des petites photos */
 
 .b2b-food-mosaic .mosaic-sub-grid .placeholder-bg {
     height: 150px;
@@ -721,6 +844,7 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 /* Zoom discret au survol */
+
 .b2b-food-mosaic img {
     transition: transform 0.4s ease;
 }
@@ -731,8 +855,45 @@ section[id] { scroll-margin-top: 90px; }
 
 
 /* ==========================================================================
-   PARTIE 3 : NOS REPAS, CONTACT, FOOTER
+   CTA FINAL
    ========================================================================== */
+
+.final-cta-section {
+    padding: 140px 0;
+    background-color: var(--bg-cream);
+    text-align: center;
+}
+
+.final-cta-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-vegetal);
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.final-cta-section h2 span {
+    color: var(--accent-color);
+}
+
+.final-cta-section p {
+    font-size: 1.3rem;
+    color: var(--primary-vegetal);
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+
+/* ==========================================================================
+   PARTIE 3 : NOS REPAS, CONTACT ET FOOTER
+   ========================================================================== */
+
+
+/* ==========================================================================
+   NOS REPAS
+   ========================================================================== */
+
 .meals-section {
     padding: 100px 0;
     background-color: var(--white);
@@ -749,7 +910,9 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 .meals-section h2 span,
-.contact-section h2 span { color: var(--accent-color); }
+.contact-section h2 span {
+    color: var(--accent-color);
+}
 
 .meals-grid {
     display: grid;
@@ -774,11 +937,14 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 .meal-card .meal-photo {
+    display: block;
     flex: none;
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
     border-radius: 18px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .meal-card h4 {
@@ -793,6 +959,11 @@ section[id] { scroll-margin-top: 90px; }
     line-height: 1.6;
     opacity: 0.8;
 }
+
+
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
 
 .contact-section {
     padding: 100px 0;
@@ -832,6 +1003,11 @@ section[id] { scroll-margin-top: 90px; }
     align-self: center;
 }
 
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
 .site-footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -847,7 +1023,9 @@ section[id] { scroll-margin-top: 90px; }
 }
 
 .site-footer .logo-fer,
-.site-footer .logo-meal { color: var(--white); }
+.site-footer .logo-meal {
+    color: var(--white);
+}
 
 .footer-links {
     display: flex;
@@ -864,67 +1042,186 @@ section[id] { scroll-margin-top: 90px; }
     transition: var(--transition-smooth);
 }
 
-.footer-links a:hover { opacity: 1; }
+.footer-links a:hover {
+    opacity: 1;
+}
 
 .footer-copy {
     font-size: 0.85rem;
     opacity: 0.6;
 }
 
+
 /* ==========================================================================
-   PARTIE 4 : RESPONSIVE (tablette et mobile)
+   PARTIE 4 : RESPONSIVE
    ========================================================================== */
+
+
+/* ==========================================================================
+   TABLETTES ET PETITS ORDINATEURS
+   ========================================================================== */
+
 @media (max-width: 992px) {
-    .split-layout { flex-direction: column !important; gap: 40px !important; }
-    .timeline-grid { flex-direction: column !important; gap: 20px !important; }
+
+    /* Sections avec texte et image */
+
+    .split-layout {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
+    /* Étapes de fonctionnement */
+
+    .timeline-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Images de présentation */
+
     .story-image,
-      .placeholder-bg {
-          width: 100%;
-          height: 320px;
-          flex: none;
-      }
-    .concept-hero h1 { font-size: 2.6rem; }
-    .story-text h2, .seasons-section h2, .timeline-section h2, .frigo-section h2 { font-size: 2.2rem; }
-    .final-cta-section h2 { font-size: 2.5rem; }
-    .b2b-hero { padding: 140px 0 40px 0; }
-    .b2b-food-mosaic { order: 2; margin-top: 20px; }
+    .placeholder-bg {
+        width: 100%;
+        height: 320px;
+        flex: none;
+    }
+
+    /* Titres */
+
+    .concept-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .story-text h2,
+    .seasons-section h2,
+    .timeline-section h2,
+    .frigo-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .final-cta-section h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Hero entreprises */
+
+    .b2b-hero {
+        padding: 140px 0 40px 0;
+    }
+
+    /* Mosaïque culinaire */
+
+    .b2b-food-mosaic {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    .b2b-food-mosaic .mosaic-main {
+        height: 260px;
+    }
+
+    .b2b-food-mosaic .mosaic-sub-grid .placeholder-bg {
+        height: 140px;
+    }
 }
 
+
+/* ==========================================================================
+   MOBILES
+   ========================================================================== */
+
 @media (max-width: 768px) {
-    .navbar { padding: 16px 5%; }
-    .nav-links, .btn-nav { display: none; }
-    .hero-section { padding: 140px 5% 40px 5%; }
-    .hero-content h1 { font-size: 2.8rem; letter-spacing: -1px; }
-    .hero-actions { flex-direction: column; gap: 15px; }
-    .partners-grid { gap: 30px !important; }
+
+    /* Navigation */
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .nav-links,
+    .btn-nav {
+        display: none;
+    }
+
+    /* Hero accueil */
+
+    .hero-section {
+        padding: 140px 5% 40px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Partenaires */
+
+    .partners-grid {
+        gap: 30px !important;
+    }
+
+    /* Titres des repas et du contact */
+
     .meals-section h2,
-    .contact-section h2 { font-size: 2.2rem; }
-}
+    .contact-section h2 {
+        font-size: 2.2rem;
+    }
 
+    /* Images de présentation */
 
-/* Ajustements des images sur mobile */
-@media (max-width: 768px) {
     .b2b-hero .story-image,
     .story-section .story-image {
         height: 300px;
         width: 100%;
     }
 
+    /* Mosaïque culinaire */
+
     .b2b-food-mosaic .mosaic-main {
         height: 240px;
+    }
+
+    .b2b-food-mosaic .mosaic-sub-grid {
+        gap: 12px;
     }
 
     .b2b-food-mosaic .mosaic-sub-grid .placeholder-bg {
         height: 120px;
     }
 
+    /* Espacement de la mosaïque */
+
     .b2b-food-mosaic {
         margin-top: 20px;
+    }
+
+    /* CTA final */
+
+    .final-cta-section {
+        padding: 90px 0;
+    }
+
+    .final-cta-section h2 {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+    }
+
+    .final-cta-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
     }
 }
 
 
-/* Hauteur commune des textes en Syne */
+/* ==========================================================================
+   HAUTEUR COMMUNE DES TEXTES EN SYNE
+   ========================================================================== */
+
 .hero-content h1,
 .partners-section h2,
 .concept-hero h1,
